@@ -1,0 +1,30 @@
+name: aplikasitest1
+description: "A new Flutter project."
+publish_to: 'none' # Prevents the package from being published to pub.dev
+
+version: 1.0.0+1 # Version number of your app
+
+environment:
+  sdk: '>=3.4.3 <4.0.0' # Specifies the Dart SDK version your app requires
+
+dependencies:
+  flutter:
+    sdk: flutter # Indicates that the app depends on the Flutter SDK
+  cupertino_icons: ^1.0.6 # Adds support for iOS-style icons
+  google_fonts: ^6.2.1 # Adds the Google Fonts package
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter # Allows you to write tests for your Flutter app
+  flutter_lints: ^3.0.0 # Recommended linting rules for Flutter projects
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - img/how to train your dragon.jpg
+    - img/Everest.jpg
+    - img/Kilimanjaro.jpg
+    - img/annapurna.jpg
+    - img/Rinjani.jpg
+    - img/img.jpg
