@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
-import 'sesi7_page.dart';
 import 'sesi4_page.dart';
 import 'sesi5_page.dart';
-import 'sesi6_page.dart'; // Add this import for Sesi6
+import 'sesi6_page.dart'; 
+import 'sesi7_page.dart';
+import 'custom_button.dart'; 
+
+void main() {
+  runApp(const MaterialApp(
+    home: HomePage(),
+    debugShowCheckedModeBanner: false, // Menghilangkan label "DEBUG"
+  ));
+}
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -20,14 +28,14 @@ class HomePage extends StatelessWidget {
             child: Column(
               children: [
                 const Text("Coba Klik Saya"),
-                SizedBox(height: 10), // Jarak antara teks dan tombol pertama
+                const SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return const Sesi4();
+                          return const Sesi4(); // Pindah ke Sesi4
                         },
                       ),
                     );
@@ -35,14 +43,14 @@ class HomePage extends StatelessWidget {
                   },
                   child: const Text("Sesi 4"),
                 ),
-                SizedBox(height: 10), // Jarak antar tombol
+                const SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return const Sesi5();
+                          return const Sesi5(); // Pindah ke Sesi5
                         },
                       ),
                     );
@@ -50,14 +58,14 @@ class HomePage extends StatelessWidget {
                   },
                   child: const Text("Sesi 5"),
                 ),
-                SizedBox(height: 10), // Jarak antar tombol
+                const SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return const Sesi6(); // Now points to Sesi6
+                          return const Sesi6(); // Pindah ke Sesi6
                         },
                       ),
                     );
@@ -65,14 +73,14 @@ class HomePage extends StatelessWidget {
                   },
                   child: const Text("Sesi 6"),
                 ),
-                SizedBox(height: 10), // Jarak antar tombol
+                const SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return const Sesi7(); // Now points to Sesi7
+                          return const Sesi7(); // Pindah ke Sesi7
                         },
                       ),
                     );
@@ -87,10 +95,4 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-}
-
-void main() {
-  runApp(const MaterialApp(
-    home: HomePage(),
-  ));
 }
