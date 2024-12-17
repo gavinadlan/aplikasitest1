@@ -4,6 +4,7 @@ import 'sesi5_page.dart';
 import 'sesi6_page.dart'; 
 import 'sesi7_page.dart';
 import 'custom_button.dart'; 
+import 'sesi12_page.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -19,7 +20,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Sesi 4, 5, 6 & 7"),
+        title: const Text("Sesi 4, 5, 6, 7 & 12"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -87,6 +88,21 @@ class HomePage extends StatelessWidget {
                     print("Tombol Sesi 7 Di Klik");
                   },
                   child: const Text("Sesi 7"),
+                ),
+                const SizedBox(height: 10),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Sesi12(); // Pindah ke Sesi12
+                        },
+                      ),
+                    );
+                    print("Tombol Sesi 12 Di Klik");
+                  },
+                  child: const Text("Sesi 12"),
                 ),
               ],
             ),
