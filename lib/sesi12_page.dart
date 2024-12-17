@@ -31,10 +31,8 @@ class Sesi12 extends StatelessWidget {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),
-            // Menggunakan Expanded untuk GridView agar bisa menyesuaikan ruang
-            Expanded(
-              child: _buildSuggestionGrid(),
-            ),
+            // Menggunakan GridView di bawah tanpa Expanded
+            _buildSuggestionGrid(),
           ],
         ),
       ),
@@ -142,7 +140,6 @@ class Sesi12 extends StatelessWidget {
         ),
         itemCount: 2, // Tampilkan hanya 2 produk
         itemBuilder: (context, index) {
-          // Sesuaikan gambar dan produk berdasarkan index
           String imagePath = index == 0 ? 'img/vario.jpg' : 'img/aerox.jpeg'; // Ganti gambar sesuai index
           String productName = index == 0 ? 'Honda Vario 125 CBS ISS' : 'Yamaha Aerox 155 ABS';
           String price = index == 0 ? 'Rp24.000.000' : 'Rp32.000.000';
